@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
 	function signup() {
-		var form = document.memberContract;
+		var form = document.memberModify;
 
 		if (form.name.value == "") {
 			alert("이름을 입력하세요");
@@ -57,7 +57,7 @@
 	
 	function idCheck()
 	{
-		var form = document.memberContract;
+		var form = document.memberModify;
 		var sid = form.id.value;
 		
 		if(sid == "")
@@ -68,13 +68,19 @@
 	
 	function sNCheck()
 	{
-		var form = document.memberContract;
+		var form = document.memberModify;
 		var sid = form.schoolnum.value;
 		
 		if(sid == "")
 			alert("입력된 학번이 없습니다.");
 		else
 			window.open("checkSchoolnum.jsp?schoolnum="+sid,"","width=400 height=150");
+	}
+	
+	function member_delete()
+	{
+		document.memberModify.action = "memberDelete_ok.jsp";
+		document.memberModify.submit();
 	}
 </script>
 </head>
@@ -92,7 +98,7 @@
 
 	%>
 	<div style="position: absolute; top: 200px; left: 520px;">
-		<form name="memberContract" method="post" action="modify_ok.jsp"
+		<form name="memberModify" method="post" action="memberModify_ok.jsp"
 			onsubmit="return signup()">
 			<table border="1" align="center">
 				<tr height="40">
@@ -159,13 +165,15 @@
 				</tr>
 
 				<tr height="40">
-					<td colspan="2" align="center"><input type="submit"
-						value="저장" name="contract">
+					<td colspan="2" align="center">
+					<input type="submit" value="저장" name="contract">
+					<input type="button" value="회원탈퇴" onclick="member_delete()">
 				</tr>
 
 			</table>
 		</form>
 	</div>
+
 	
 	<%
 		} catch (Exception e) {
