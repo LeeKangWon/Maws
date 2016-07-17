@@ -16,7 +16,7 @@
 		int sizeLimit = 1*1024*1024; //1메가
 		
 		String saveFolder="/Image";
-		String savePath1=""; //웹 어플리케이션의 절대 경로가 저장될 객체
+		String savePath1="/Image"; //웹 어플리케이션의 절대 경로가 저장될 객체
 		ServletContext context = getServletContext();
 		savePath1 = context.getRealPath(saveFolder);
 		
