@@ -6,6 +6,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
 <title>게시판 등록 폼</title>
+
+<!-- Smart Editor -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./resources/se2/js/HuskyEZCreator.js"></script>
+
+ 
+
+<!-- Smart Editor -->
+
+<script>
+    $(function(){
+        //전역변수선언
+        var editor_object = [];
+         
+        nhn.husky.EZCreator.createInIFrame({
+            oAppRef: editor_object,
+            elPlaceHolder: "editor",
+            sSkinURI: "./resources/se2/SmartEditor2Skin.html", 
+            htParams : {
+                // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
+                bUseToolbar : true,             
+                // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
+                bUseVerticalResizer : true,     
+                // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
+                bUseModeChanger : true, 
+            }
+        });
+         
+        //전송버튼 클릭이벤트
+        $("#savebutton").click(function(){
+            //id가 smarteditor인 textarea에 에디터에서 대입
+            editor_object.getById["editor"].exec("UPDATE_CONTENTS_FIELD", []);
+             
+            // 이부분에 에디터 validation 검증
+             
+            //폼 submit
+            $("#frm").submit();
+        });
+    });
+</script>
 <script type="text/javascript" src="/resources/ckeditor/ckeditor.js"></script>
 <script type="text/JavaScript">
 	window.onload = function() {
@@ -72,8 +112,8 @@ table tbody tr th {
 						<td><input type="text" name="writer" maxlength="20" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><textarea id="contents" name="contents"
-								cols="80" rows="10"></textarea></td>
+						<td colspan="2"><textarea id="editor" name="contents"
+								cols="98" rows="10"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
