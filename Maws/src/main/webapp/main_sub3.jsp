@@ -140,7 +140,7 @@
 			<li class="active"><a href="#">Maws</a></li>
 			<li><a href="#">등업신청</a></li>
 			<li><a href="member_intro.jsp">회원정보</a></li>
-			<li><a href="#">갤러리</a></li>
+			<li><a href="ImgView.jsp">갤러리</a></li>
 			<li><a href="#">자유게시판</a></li>
 		</ul>
 	</div>

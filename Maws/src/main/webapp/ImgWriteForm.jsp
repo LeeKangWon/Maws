@@ -10,7 +10,7 @@
 <body>
 
 	<div style="position: absolute; left: 330px; top: 260px;">
-	<form name="formUpload" method="post" enctype="multipart/form-data" action="upload_cos_ok.jsp">
+	<form name="formUpload" method="post" enctype="multipart/form-data" action="ImgUpload_ok.jsp">
 		<input type="file" name="upfile" onkeydown="event.returnValue=false;">
 		<textarea name="contents" rows="5" cols="55"></textarea>
 		<input type="submit" value="확인"/>

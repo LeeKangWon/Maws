@@ -19,7 +19,7 @@
 		String fullPath = "";
 		String fileNameTest="";
 		String saveFolder="/Image";
-		String savePath1="D:/사진"; //웹 어플리케이션의 절대 경로가 저장될 객체
+		String savePath1="D:\\MawsPage\\Maws\\src\\main\\webapp\\resources\\image"; //웹 어플리케이션의 절대 경로가 저장될 객체
 		// 사용할 객체 초기화
 		Connection con = null;
 		PreparedStatement ps = null;

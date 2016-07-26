@@ -109,12 +109,12 @@ public class GalleryDAO {
 
 	} // db_close
 
-	public ArrayList<GalleryVO> getMemberIntrolist() {
+	public ArrayList<GalleryVO> getFileNamelist() {
 
 		ArrayList<GalleryVO> list = new ArrayList<GalleryVO>(); // List 생성
 
 		try {// 실행
-			String sql = "select filename from gallery ";
+			String sql = "select * from gallery ";
 			// SELECT * FROM 테이블명 = 모든 칼럼 불러오기
 
 			System.out.println("sql = " + sql);
@@ -136,7 +136,7 @@ public class GalleryDAO {
 				list.add(vo); // 리스트에 vo모두 껴넣기
 			}
 		} catch (Exception e) {
-			System.out.println(e + "=> getMemberIntrolist fail");
+			System.out.println(e + "=> getFileNamelist fail");
 		} finally {
 			db_close();
 		}
