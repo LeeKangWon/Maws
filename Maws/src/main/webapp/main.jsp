@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="true" pageEncoding="UTF-8"
+<%@ page session="true" pageEncoding="EUC-KR"
 	contentType="text/html; charset=UTF-8"%>
 <%@ page import="java.sql.*"%>
 <html>
@@ -125,24 +125,24 @@ body {
 	
 		else
 		{
-			// ì‚¬ìš©í•  ê°ì²´ ì´ˆê¸°í™”
+			// »ç¿ëÇÒ °´Ã¼ ÃÊ±âÈ­
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
-			// íŒŒë¼ë¯¸í„°
+			// ÆÄ¶ó¹ÌÅÍ
 			String query = "select m_level from member where m_id =?";
 			
 			int level = 0;
 			
 			String slevel = "";
 			try {
-				// ë°ì´í„°ë² ì´ìŠ¤ ê°ì²´ ìƒì„±
+				// µ¥ÀÌÅÍº£ÀÌ½º °´Ã¼ »ý¼º
 				Class.forName("com.mysql.jdbc.Driver");
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/maws", "jspbook", "1234");
-				// ì¡°íšŒìˆ˜ ì¦ê°€ ì¿¼ë¦¬ ì‹¤í–‰
+				// Á¶È¸¼ö Áõ°¡ Äõ¸® ½ÇÇà
 				pstmt = conn.prepareStatement(query);
 				pstmt.setString(1, (String)session.getAttribute("id"));
-				// ê²Œì‹œë¬¼ ìƒì„¸ ì¡°íšŒ ì¿¼ë¦¬ ì‹¤í–‰ 
+				// °Ô½Ã¹° »ó¼¼ Á¶È¸ Äõ¸® ½ÇÇà 
 				rs = pstmt.executeQuery();
 				if(rs.next())
 				{
@@ -152,26 +152,26 @@ body {
 				
 				if(level == 0)
 				{
-					slevel = "ë¹„íšŒì›";
+					slevel = "ºñÈ¸¿ø";
 				}
 				else if(level == 1)
 				{
-					slevel = "íšŒì›";
+					slevel = "È¸¿ø";
 				}
 				else if(level == 2)
 				{
-					slevel = "ìž„ì›";
+					slevel = "ÀÓ¿ø";
 				}
 				else if(level == 3)
 				{
-					slevel = "ê´€ë¦¬ìž";
+					slevel = "°ü¸®ÀÚ";
 				}
 				
 				
 				%>
 				<div style="position: absolute; left: 850px; top: 60px;">
 				<%
-				out.print(session.getAttribute("id") + slevel + "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.");
+				out.print(session.getAttribute("id") + slevel + "´Ô È¯¿µÇÕ´Ï´Ù.");
 				%>
 				</div>
 				<%
@@ -193,8 +193,8 @@ body {
 			<td><a href="logout_popup.jsp"><img
 					src="resources\image\logout_img.png" width="30" height="30">logout</a>
 			</td>
-			<td><a href="modify_member.jsp" value="ê°œì¸ì •ë³´ ë³€ê²½"><img
-					src="resources\image\modify_user.png" width="30" height="30">ë‚´ì •ë³´</td>
+			<td><a href="modify_member.jsp" value="°³ÀÎÁ¤º¸ º¯°æ"><img
+					src="resources\image\modify_user.png" width="30" height="30">³»Á¤º¸</td>
 				</table>
 			</div>
 			<%
@@ -205,8 +205,8 @@ body {
 
 	<div style="position: absolute; left: 45px; top: 120px;">
 		<ul id="menu" class="orange" >
-			<li><a href="maws_intro.jsp">ë™ì•„ë¦¬ ì†Œê°œ</a></li>
-			<li><a href="main_sub2.jsp">ê³µì§€ì‚¬í•­</a></li>
+			<li><a href="maws_intro.jsp">µ¿¾Æ¸® ¼Ò°³</a></li>
+			<li><a href="main_sub2.jsp">°øÁö»çÇ×</a></li>
 			<li><a href="main_sub3.jsp">Maws</a></li>
 			<li><a href="main_sub4.jsp">C-edu</a></li>
 			<li><a href="main_sub5.jsp">Q&A</a></li>

@@ -374,6 +374,13 @@ public class MemberDAO {
 		}
 		return vo;
 	}// 회원수정으로 인해 회원정보를 가져옴
+	
+	public int getLevel(String uid) {
+		
+		
+		return 0;
+		
+	}
 
 	public int updateMember(MemberVO vo) {
 		System.out.print("test");
@@ -466,6 +473,7 @@ public class MemberDAO {
 
 		return result;
 	}
+
 	
 	public ArrayList<MemberVO> getMemberIntrolist() {
 

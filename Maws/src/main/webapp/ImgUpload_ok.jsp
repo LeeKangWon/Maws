@@ -14,6 +14,7 @@
 </head>
 <body>
 	<%
+		request.setCharacterEncoding("UTF-8");
 		String encType="UTF-8"; //인코딩 타입
 		int sizeLimit = 1*1024*1024; //1메가
 		String fullPath = "";

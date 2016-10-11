@@ -9,6 +9,7 @@
 </head>
 <body>
 
+	<%request.setCharacterEncoding("UTF-8"); %>
 	<div style="position: absolute; left: 330px; top: 260px;">
 	<form name="formUpload" method="post" enctype="multipart/form-data" action="ImgUpload_ok.jsp">
 		<input type="file" name="upfile" onkeydown="event.returnValue=false;">

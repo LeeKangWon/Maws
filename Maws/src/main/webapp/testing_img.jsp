@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img src="resources\image\arrow.png"/>
+<img src="resources\image\professor\professor.jpg"/>
 
 </body>
 </html>

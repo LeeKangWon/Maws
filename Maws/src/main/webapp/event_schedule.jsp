@@ -24,6 +24,7 @@
 	y = cal.get(Calendar.YEAR);
 	m = cal.get(Calendar.MONTH) + 1;
 
+
 	int w = cal.get(Calendar.DAY_OF_WEEK); //1(일)~7(토) => 일요일일때 w에 1. 메소드를 외우면 된다.
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -61,6 +62,13 @@ a:HOVER {
 		var url = "event_schedule.jsp?y=" + y + "&m=" + m;
 		location.href = url; //url이 가지고 있는 값으로 이동
 	}
+	
+	function Data() {
+		
+		var y = document.getElementById("y").value;
+		var m = document.getElementById("m").value;
+		var d = document.getElementById("d").value;
+	}
 </script>
 </head>
 <body>
@@ -86,6 +94,7 @@ a:HOVER {
 					<option value="<%=i%>"><%=i%>년
 					</option>
 					<%
+					
 						}
 					%>
 				</select> <select id="m" onchange="changeDate();">
@@ -123,16 +132,18 @@ a:HOVER {
 				String fc;
 				for (int i = 1; i <= cal.getActualMaximum(Calendar.DATE); i++) {
 					fc = w % 7 == 1 ? "red" : (w % 7 == 0 ? "blue" : "black");
-					out.println("<td align='center' bgcolor='#ffffff' style='color:" + fc + ";'>");
+					out.println("<td id='day' value='"+i+"' align='center' bgcolor='#ffffff' style='color:" + fc + ";'>");
 
-					out.print(i + "</td>");
+					out.print("<a href='test.jsp'>" + i + "</a>" + "</td>");
 
 					w++;
 					if (w % 7 == 1 && i != cal.getActualMaximum(Calendar.DATE)) {
 						out.println("</tr>");
 						out.println("<tr height='100'>"); // 공백 부분
 						for (int j = 1; j <= 7; j++)
+						{
 							out.println("<td align='center' bgcolor='#ffffff';>&nbsp;</td>");
+						}
 						out.println("</tr>"); //  공백 부분
 						out.println("<tr height='25'>");
 					}
