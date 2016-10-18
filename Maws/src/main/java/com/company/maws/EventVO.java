@@ -1,12 +1,20 @@
 package com.company.maws;
 
 public class EventVO {
+	private int num;
 	private int year;
 	private int month;
 	private int day;
 	private String title;
 	private String content;
 	private int level;
+	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	
 	public int getYear() {
 		return year;

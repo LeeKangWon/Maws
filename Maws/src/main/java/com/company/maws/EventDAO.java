@@ -100,25 +100,26 @@ public class EventDAO {
 
 		try {
 			// 실행
-			String sql = "INSERT INTO member VALUES(?,?,?,?,?,?)";
+			String sql = "INSERT INTO cal VALUES(?,?,?,?,?,?,?)";
 			/*
 			 * INSERT INTO 테이블명 VALUES(컬럼1 넣고자하는 데이터, 컬럼2 넣고자하는 데이터 ...) 컬럼을
 			 * 선택하여 값을 넣을수도 있다. 선택적으로 넣기 위해서는 INSERT 테이블명 VALUES 넣고자하는 데이터
 			 */
 			ps = con.prepareStatement(sql);
-			ps.setInt(1, vo.getYear());
-			ps.setInt(2, vo.getMonth());
-			ps.setInt(3, vo.getDay());
-			ps.setString(4, vo.getTitle());
-			ps.setString(5, vo.getContent());
-			ps.setInt(6, vo.getLevel());
+			ps.setInt(1, vo.getNum());
+			ps.setInt(2, vo.getYear());
+			ps.setInt(3, vo.getMonth());
+			ps.setInt(4, vo.getDay());
+			ps.setString(5, vo.getTitle());
+			ps.setString(6, vo.getContent());
+			ps.setInt(7, vo.getLevel());
 
 			result = ps.executeUpdate();
 			// executeUpdate()는 업뎃한 건수를 반환
 
 		} catch (Exception e) {
 
-			System.out.println(e + "=> memberInsert fail");
+			System.out.println(e + "=> eventInsert fail");
 
 		} finally {
 			db_close();

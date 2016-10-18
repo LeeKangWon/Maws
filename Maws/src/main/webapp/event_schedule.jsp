@@ -2,6 +2,7 @@
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <%
 	request.setCharacterEncoding("utf-8");
 
@@ -134,7 +135,7 @@ a:HOVER {
 					fc = w % 7 == 1 ? "red" : (w % 7 == 0 ? "blue" : "black");
 					out.println("<td id='day' value='"+i+"' align='center' bgcolor='#ffffff' style='color:" + fc + ";'>");
 
-					out.print("<a href='test.jsp'>" + i + "</a>" + "</td>");
+					out.print("<a href='test_level.jsp'>" + i + "</a>" + "</td>");
 
 					w++;
 					if (w % 7 == 1 && i != cal.getActualMaximum(Calendar.DATE)) {

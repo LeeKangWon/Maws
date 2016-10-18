@@ -88,15 +88,15 @@ table tbody tr th {
 					<tr>
 						<th align="center">제목</th>
 						<td><input type="text" name="subject" size="80"
-							maxlength="100" value="<%=rs.getString("SUBJECT")%>" /></td>
+							maxlength="100" value="<%=rs.getString("subject")%>" /></td>
 					</tr>
 					<tr>
 						<th align="center">작성자</th>
 						<td><input type="text" name="writer" maxlength="20"
-							value="<%=rs.getString("WRITER")%>" /></td>
+							value="<%=rs.getString("writer")%>" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><textarea name="contents" cols="80" rows="10"><%=rs.getString("CONTENTS")%></textarea>
+						<td colspan="2"><textarea name="contents" cols="80" rows="10"><%=rs.getString("contents")%></textarea>
 							<script>
 								CKEDITOR.replace('contents');
 							</script></td>
