@@ -25,16 +25,12 @@
 		dao.updateMember(vo);
 		 %>
 
-		 <table  style="position: absolute; top: 200px; left: 450px" width="700" cellpadding="5"
+		 <table  style="position: absolute; top: 200px; left: 400px" width="700" cellpadding="5"
 		  align="center">
 		  <tr>
 		   <td height="39" align="center"><font size="6"><b>회원정보가 수정되었습니다.</b></font></td>
 		  </tr>
-		  
-		  <tr>
-		   <td align="center">
-		     5초후에 메인으로 이동합니다.
-		    <meta http-equiv="Refresh" content="5;url=main.jsp">
+		    <meta http-equiv="Refresh" content="2;url=main.jsp">
 		   </td>
 		  </tr>
 		 </table>

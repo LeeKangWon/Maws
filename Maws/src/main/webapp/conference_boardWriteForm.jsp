@@ -53,9 +53,7 @@
 	}
 </script>
 <style type="text/css">
-* {
-	font-size: 9pt;
-}
+
 
 p {
 	width: 600px;
@@ -83,7 +81,9 @@ table tbody tr th {
 			form.writer.focus();
 			return false;
 		}
+		
 		return true;
+
 	}
 </script>
 </head>

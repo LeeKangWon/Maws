@@ -4,6 +4,7 @@
 <%@ page import="java.sql.*"%>
 <%
 	// 사용할 객체 초기화
+	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;

@@ -1,6 +1,6 @@
-<%@ include file="main.jsp"%>
+<%@ include file="index.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -138,12 +138,12 @@
 	<div id="cssmenu" style="position:absolute; left:50px; top:300px;">
 		<ul>
 			<li class="active"><a href="#">Q&A</a></li>
-			<li><a href="#">È¨ÆäÀÌÁö Á¦ÀÛÀÚ</a></li>
-			<li><a href="#">Áú¹®°Ô½ÃÆÇ</a></li>
-			<li><a href="#">¸¶¿ì½º°ü·Ã</a></li>
-			<li><a href="#">C-edu°ü·Ã</a></li>
-			<li><a href="#">°í¹Î»ó´ã</a></li>
-			<li class="active"><a href="#">ÀÓ¿ø°Ô½ÃÆÇ</a>
+			<li><a href="#">í™ˆíŽ˜ì´ì§€ ì œìž‘ìž</a></li>
+			<li><a href="#">ì§ˆë¬¸ê²Œì‹œíŒ</a></li>
+			<li><a href="#">ë§ˆìš°ìŠ¤ê´€ë ¨</a></li>
+			<li><a href="#">C-eduê´€ë ¨</a></li>
+			<li><a href="#">ê³ ë¯¼ìƒë‹´</a></li>
+			<li class="active"><a href="#">ìž„ì›ê²Œì‹œíŒ</a>
 		</ul>
 	</div>
 

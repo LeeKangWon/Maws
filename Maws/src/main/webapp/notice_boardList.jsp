@@ -83,9 +83,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
 <title>게시판 목록</title>
 <style type="text/css">
-* {
-	font-size: 9pt;
-}
 
 p {
 	width: 600px;

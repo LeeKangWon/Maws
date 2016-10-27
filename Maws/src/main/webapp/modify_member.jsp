@@ -1,7 +1,7 @@
 <%@page import="com.company.maws.MemberDAO"%>
 <%@page import="com.company.maws.MemberVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ include file="main.jsp"%>
+<%@ include file="index.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,6 +9,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 가입</title>
+
+<style type="text/css">
+*{margin:0;padding:0}
+ul,ol,li{list-style:none}
+img{border:none}
+a{color:#333;text-decoration:none}
+a:hover{color:#f00; text-decoration:underline;}
+body{font-family: "돋움"; color:#333}
+
+#formcon {width: 630px; margin: 0 auto}
+#formcon h3{padding: 0 0 10px 0; font-size: 15px; font-weight: bold}
+#formcon p{padding: 0 0 20px 0}
+fieldset{border: none}
+legend, caption {font-size: 0; width: 0; height: 0}
+#formcon table{width: 100%; border-top: 2px solid #009999;
+border-bottom: 2px solid #009999;border-spacing: 0}
+#formcon td{border-bottom: 1px solid #333; padding: 10px 0 10px 10px}
+#formcon th{border-bottom: 1px solid #333; padding: 10px 0 10px 10px; background: #d7f0ef; text-align: left}
+
+#formcon input{border: 1px solid #a6d5dd; color:#0000ff; padding: 1px}
+#formcon .input_btn{text-align: center}
+#formcon .input_btn input{border: 0; vertical-align: middle; margin-top: 5px}
+#formcon img{vertical-align: middle; margin-top: -3px}
+
+
+</style>
 
 <script type="text/javascript">
 	function signup() {
@@ -97,38 +123,38 @@
 			
 
 	%>
-	<div style="position: absolute; top: 200px; left: 520px;">
+	<div id="formcon" style="position: absolute; top: 250px; left: 400px;">
 		<form name="memberModify" method="post" action="memberModify_ok.jsp"
 			onsubmit="return signup()">
 			<table border="1" align="center">
 				<tr height="40">
-					<td width="100" align="center">이&nbsp;&nbsp;&nbsp;름</td>
+					<th width="100" align="center">이&nbsp;&nbsp;&nbsp;름</th>
 					<td width="100"><input type="text" name="name" value = "<%=vo.getName()%>">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">학&nbsp;&nbsp;&nbsp;번</td>
+					<th width="100" align="center">학&nbsp;&nbsp;&nbsp;번</td>
 					<td width="100"><input type="text" name="schoolnum" value="<%=vo.getSchoolnum()%>"/>
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">아이디</td>
+					<th width="100" align="center">아이디</td>
 					<td width="100">
 					<%=vo.getId()%>
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">비밀번호재입력</td>
+					<th width="100" align="center">비밀번호재입력</td>
 					<td width="100"><input type="password" name="password">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">주&nbsp;&nbsp;&nbsp;소</td>
+					<th width="100" align="center">주&nbsp;&nbsp;&nbsp;소</td>
 					<td width="100"><input type="text" size="30" name="address"  value="<%=vo.getAddress()%>">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">생&nbsp;&nbsp;&nbsp;일</td>
+					<th width="100" align="center">생&nbsp;&nbsp;&nbsp;일</td>
 					<td width="100"><select name="birthY">
 							<%
 								for (int i = 2016; i >= 1950; i--) {
@@ -160,12 +186,12 @@
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">핸드폰번호</td>
+					<th width="100" align="center">핸드폰번호</td>
 					<td width="100"><input type="text" size="20" name="phone" value="<%=vo.getPhone()%>">
 				</tr>
 
 				<tr height="40">
-					<td colspan="2" align="center">
+					<th colspan="2" align="center">
 					<input type="submit" value="저장" name="contract">
 					<input type="button" value="회원탈퇴" onclick="member_delete()">
 				</tr>

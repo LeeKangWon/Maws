@@ -1,10 +1,10 @@
-<%@ include file="main.jsp"%>
+<%@ include file="index.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>jQuery UI Menu - Categories</title>
 
 <style type="text/css">
@@ -138,10 +138,10 @@
 
 	<div id="cssmenu" style="position: absolute; left: 50px; top: 300px;">
 		<ul>
-			<li class="active"><a href="#">╣©╬ф╦╝ ╪р╟Ё</a></li>
-			<li><a href="maws_intro.jsp">╦╤©Л╫╨╤У?</a></li>
-			<li><a href="officer_intro2015.jsp">юс©Ь╪р╟Ё</a></li>
-			<li><a href="professor_intro.jsp">╢Ц╢Г╠Ё╪Ж╢т</a></li>
+			<li class="active"><a href="#">К▐≥Л∙└К╕╛ Л├▄Й╟°</a></li>
+			<li><a href="maws_intro.jsp">К╖┬Л ╟Л┼╓К·─?</a></li>
+			<li><a href="officer_intro2015.jsp">Л·└Л⌡░Л├▄Й╟°</a></li>
+			<li><a href="professor_intro.jsp">К▀╢К▀╧Й╣░Л┬≤К▀≤</a></li>
 		</ul>
 	</div>
 

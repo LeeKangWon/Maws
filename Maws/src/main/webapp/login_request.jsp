@@ -36,8 +36,7 @@
 			System.out.println("로그인 성공");
 			out.print("<script>");
 			out.print("alert('로그인이 정상적으로 처리 되었습니다.');");
-			out.print("self.close();");
-			out.print("location.href='main.jsp;'");
+			out.print("location.href='home.jsp'");
 			out.print("</script>");
 		}
 		else if(flag==0)
@@ -46,7 +45,7 @@
 			System.out.println("로그인 실패 => 패스워드 불일치");
 			out.print("<script>");
 			out.print("alert('패스워드가 일치하지 않습니다.');");
-			out.print("location.href='main.jsp';");
+			out.print("location.href='home.jsp';");
 			out.print("</script>");
 		}
 		else
@@ -54,7 +53,7 @@
 			System.out.println("로그인 실패=> 아이디없거나 불일치");
 			out.print("<script>");
 			out.print("alert('아이디를 확인해 주세요.');");
-			out.print("location.href='main.jsp';");
+			out.print("location.href='home.jsp';");
 			out.print("</script>");
 		}
 	%>

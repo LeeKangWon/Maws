@@ -16,11 +16,16 @@
 <body>
 
 	<jsp:useBean id="dao" class="com.company.maws.GalleryDAO" />
+	
+	<div style="position: absolute; left: 400px; top: 200px;">
+			<input type="button" value="이미지 등록" onclick="location.href='ImgWriteForm.jsp'">
+	</div>
+	
 	<form name="view">
 		<%		
 		int top = 400;
 		int rowcount = 1;
-			String saveFloder = "resources/image/";
+			String saveFloder = "resources/image/gallery";
 			ArrayList<GalleryVO> f_list = new ArrayList<GalleryVO>();
 			f_list = dao.getFileNamelist(); //dao로 fileNameList 불러오기
 			//사용할 객체 초기화
@@ -41,6 +46,9 @@
 				System.out.println(URLDecoder.decode(savePath, "MS-949").replaceAll(" ", ""));
 				
 			%>
+		
+		
+		
 		<div style="position: absolute; left: <%=left%>px; top: <%=top%>px;">
 			<table border="1">
 				<td rowspan="3"><img src="<%=URLDecoder.decode(savePath, "UTF-8").replaceAll(" ", "")%>" width="100" height="150">
@@ -52,9 +60,6 @@
 				<tr>
 					<td><%=savePath%></td>
 					<td><%=vo.getTime() %></td>
-				</tr>
-				<tr>
-					<td colspan="3" align="right"><input type="button" value="이미지 등록" onclick="location.href='ImgWriteForm.jsp'">
 				</tr>
 			</table>
 		</div>

@@ -1,6 +1,6 @@
-<%@ include file="main.jsp"%>
+<%@ include file="index.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -135,15 +135,29 @@
 </head>
 <body>
 
+	<%
+		if(session.getAttribute("id") == null)
+		{
+			out.print("<script>alert('로그인이 필요한 서비스 입니다.')</script>");
+			out.print("<script>location.href='index.jsp'</script>");
+		}
+	
+		else
+		{
+	%>
 	<div id="cssmenu" style="position:absolute; left:50px; top:300px;">
 		<ul>
-			<li class="active"><a href="#">��������</a></li>
-			<li><a href="event_schedule.jsp">�������</a></li>
-			<li><a href="conference_boardList.jsp">ȸ�ǳ���</a></li>
-			<li><a href="notice_boardList.jsp">���Ƹ� ����</a></li>
-			<li><a href="#">���丵 ����</a></li>
+			<li class="active"><a href="#">공지사항</a></li>
+			<li><a href="event_calendar.jsp">행사일정</a></li>
+			<li><a href="conference_boardList.jsp">회의내용</a></li>
+			<li><a href="notice_boardList.jsp">동아리 공지</a></li>
+			<li><a href="#">멘토링 일정</a></li>
 		</ul>
 	</div>
+	
+	<%
+		}
+	%>
 
 
 </body>

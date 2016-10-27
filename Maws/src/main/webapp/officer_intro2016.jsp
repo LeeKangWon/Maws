@@ -7,6 +7,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>officer_intro</title>
 
+<style type="text/css">
+table.basic { 
+	width:130%; 
+	line-height:21px; 
+	border-top: 1px solid #cccccc; 
+	border-left: 1px solid #cccccc; 
+	border-collapse: collapse;
+} 
+table.basic th, table.basic td { 
+	color:#678197;
+	text-align:center;
+	border-right: 1px solid #cccccc; 
+	border-bottom: 1px solid #cccccc; 
+	padding: 3px 0; 
+	text-align:center; 
+} 
+table.basic th { 
+	background-color: #eeeeee; 
+}
+</style>
+
+
+
+<script type="text/javascript">
+	function handleSelect(elm) {
+		window.location = elm.value + ".jsp";
+	}
+</script>
+
 <script type="text/javascript">
 	function handleSelect(elm) {
 		window.location = elm.value + ".jsp";
@@ -24,167 +53,185 @@
 		</select>
 	</div>
 
-	<div style="position: absolute; left: 430px; top: 260px;">
-		회장
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 400px; top: 260px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\limsodame.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 임소담이</td>
-				<td>학번 : ?</td>
+				<td>회장</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 임소담이</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201400000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 910px; top: 260px;">
-		부회장
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 850px; top: 260px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\byeonjihong.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 변지홍</td>
-				<td>학번 : ?</td>
+				<td>부화장</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 변지홍</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201400000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
 
-	<div style="position: absolute; left: 430px; top: 470px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 400px; top: 470px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\limsodame.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 이지원</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 이지원</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 910px; top: 470px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 850px; top: 470px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\parkjunseo.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 박준서</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 박준서</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 430px; top: 680px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 400px; top: 680px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\parkyerim.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 박예림</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 박예림</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 910px; top: 680px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 850px; top: 680px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\hanhyeonsu.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 한현수</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 한현수</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
 
-	<div style="position: absolute; left: 430px; top: 890px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 400px; top: 890px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\kimmyounggyu.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 김명규</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 김명규</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 910px; top: 890px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 850px; top: 890px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\hwangdahui.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 황다희</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 황다희</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 
-	<div style="position: absolute; left: 430px; top: 1100px;">
-		임원
-		<table border="1">
-			<td rowspan="4"><img
+	<div style="position: absolute; left: 400px; top: 1100px;">
+		<table class="basic" border="1">
+			<td rowspan="5"><img
 				src="resources\image\officer2016\choinakju.jpg" width="100"
 				height="150">
 			<tr>
-				<td>이름 : 최낙주</td>
-				<td>학번 : ?</td>
+				<td>임원</td>
 			</tr>
 			<tr>
-				<td>나이 : ?</td>
-				<td>전화번호 : ?</td>
+				<td>이름 : 최낙주</td>
 			</tr>
-			<td colspan="2">이메일 : ?</td>
+			<tr>
+				<td>학번 : 201500000</td>
+			</tr>
+			<tr>
+				<td>전화번호 : 010-0000-0000</td>
+			</tr>
 		</table>
 	</div>
 

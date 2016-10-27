@@ -6,6 +6,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>login_popup</title>
 
+<style type="text/css">
+<!--
+A:link {
+	font-family: "굴림";
+	text-decoration: none;
+	color: #3E3E3E
+}
+
+A:visited {
+	font-family: "굴림";
+	text-decoration: none;
+	color: #3E3E3E
+}
+
+A:hover {
+	font-family: "굴림";
+	text-decoration: underline;
+	color: #F29708;
+}
+
+.title {
+	font-family: "굴림";
+	color: #504F4F
+}
+-->
+</style>
+
 <script type="text/javascript">
 	function signup() {
 		var form = document.loginForm;
@@ -39,24 +66,80 @@
 	
 </script>
 </head>
-<body>
-	<br>
-	<br>
 
-	<form name="loginForm" method="post" action="login_request.jsp">
-		<table>
+	<body LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+	<div id="cssmenu" style="position: absolute; left: 600px; top: 250px;">
+		<table width="235" height="180" border="0" cellspacing="0"
+			cellpadding="0" align="center">
 			<tr>
-				<td>아이디</td>
-				<td><input type="text" name="id" title="아이디" value="아이디"></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><input type="password" name="password" title="비밀번호" value="비밀번호"></td>
-				<td>아이디저장<input type="checkbox"></td>
-				<td><input type="submit" value="로그인" onclick="idCheck()"></td>
+				<td align="center" valign="top">
+
+					<form name="loginform" method=post action="login_request.jsp">
+						<table border="0" cellspacing="0" cellpadding="0" align="center"
+							width="210" height="133">
+							<tr>
+								<td width="210" height="5"></td>
+							</tr>
+							<tr>
+								<td width="210" height="3" bgcolor="#44A5E9"></td>
+							</tr>
+							<tr>
+								<td width="210" height="2" bgcolor="#D2FCFC"></td>
+							</tr>
+							<tr>
+								<td height="20" aling="center" valing="middle" class="title">로그인
+								</td>
+							</tr>
+							<tr>
+								<td height="90">
+
+									<div align="center">
+										<table border="0" cellspacing="0" cellpadding="0"
+											align="center" width="200">
+											<tr>
+												<td width="200" class="title" align="center">
+													아이디&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text"
+													name="id" size="15" class="title">
+												</td>
+											</tr>
+											<tr>
+												<td width="200" class="title" align="center">패스워드 :</font>&nbsp;<input
+													type="password" name="password" size="15" class="title">
+												</td>
+											</tr>
+										</table>
+									</div>
+
+
+								</td>
+							</tr>
+							<tr>
+								<td width="210"></td>
+							</tr>
+							<tr>
+								<td width="210" height="1" bgcolor="#A6E6E6"></td>
+							</tr>
+						</table>
+						<table border="0" cellspacing="0" cellpadding="0" align="center"
+							width="210" height="25">
+							<tr>
+								<td height="25" align="center"><input type="submit"
+									value="확인" class="title" onclick="idCheck()"> <input type="button"
+									value="취소" class="title" onClick="history.back()"></td>
+							</tr>
+							<tr>
+								<td width="210" height="1" bgcolor="#D2FCFC"></td>
+							</tr>
+							<tr>
+								<td wdith="210" height="2" bgcolor="#44A5E9"></td>
+							</tr>
+						</table>
+					</form>
+
+				</td>
 			</tr>
 		</table>
-	</form>
+	</div>
 
 
 </body>
