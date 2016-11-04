@@ -19,8 +19,8 @@
 		int sizeLimit = 1*1024*1024; //1메가
 		String fullPath = "";
 		String fileNameTest="";
-		String saveFolder="/Image";
-		String savePath1="D:\\MawsPage\\Maws\\src\\main\\webapp\\resources\\image"; //웹 어플리케이션의 절대 경로가 저장될 객체
+		//String saveFolder="/Image";
+		String savePath1="D:\\MawsPage\\Maws\\src\\main\\webapp\\resources\\image\\gallery"; //웹 어플리케이션의 절대 경로가 저장될 객체
 		// 사용할 객체 초기화
 		Connection con = null;
 		PreparedStatement ps = null;

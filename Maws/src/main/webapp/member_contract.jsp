@@ -1,11 +1,28 @@
-<%@ include file="index.jsp"%>
+<%@ include file="main.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 가입</title>
+
+<style type="text/css">
+ #formcon {width:630px;margin:0 auto}
+ #formcon h3{padding:0 0 10px 0;font-size:15px;font-weight:bold}
+ #formcon p{padding:0 0 20px 0}
+ fieldset{border:none}
+ legend,caption{font-size:0;width:0;height:0}
+ #formcon table{width:100%;border-top:2px solid #009999;
+ border-bottom:2px solid #009999;border-spacing:0}
+ #formcon td{border-bottom:1px solid #333;padding:10px 0 10px 10px}
+ #formcon th{border-bottom:1px solid #333;padding:10px 0 10px 10px;background:#d7f0ef;text-align:left}
+ #formcon input{border:1px solid #a6d5dd;color:#0000ff;padding:1px}
+ #formcon .input_btn{text-align:center}
+ #formcon .input_btn input{border:0;vertical-align:middle;margin-top:5px}
+ #formcon img{vertical-align:middle;margin-top:-3px}
+</style>
+
 
 <script type="text/javascript">
 	function signup() {
@@ -45,7 +62,15 @@
 			alert("핸드폰 번호를 입력하세요");
 			form.phone.select();
 			return false;
-		} else {
+		}
+		
+		else if (form.upfile.value == "") {
+			alert("사진을 등록하세요")
+			form.upfile.select();
+			return false;
+		}
+		
+		else {
 			alert("가입 완료");
 		}
 
@@ -93,47 +118,48 @@
 </head>
 <body>
 
-	<div style="position: absolute; top: 200px; left: 520px;">
-		<form name="memberContract" method="post" action="sign_ok.jsp"
+
+	<div id="formcon" style="position: absolute; top: 200px; left: 400px;">
+		<form name="memberContract" method="post" action="sign_ok.jsp" enctype="multipart/form-data" 
 			onsubmit="return signup()">
 			<table border="1" align="center">
 				<tr height="40">
-					<td width="100" align="center">이&nbsp;&nbsp;&nbsp;름</td>
+					<th width="100" align="center">이&nbsp;&nbsp;&nbsp;름</th>
 					<td width="100"><input type="text" name="name">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">학&nbsp;&nbsp;&nbsp;번</td>
+					<th width="100" align="center">학&nbsp;&nbsp;&nbsp;번</th>
 					<td width="100"><input type="text" name="schoolnum"/>
 					<input type="button" value="중복확인" onclick="sNCheck()"/>
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">아이디</td>
+					<th width="100" align="center">아이디</th>
 					<td width="100">
 					<input type="text" name="id" /> 
 					<input type="button" value="중복확인" onclick="idCheck()"/>
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">비밀번호</td>
+					<th width="100" align="center">비밀번호</th>
 					<td width="100"><input type="password" name="password">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">비밀번호확인</td>
+					<th width="100" align="center">비밀번호확인</th>
 					<td width="100"><input type="password" name="passwordChk"
 						onkeyup="checkPwd()"> <br>
 						<div id="passwordChk">동일한 암호를 입력하세요</div>
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">주&nbsp;&nbsp;&nbsp;소</td>
+					<th width="100" align="center">주&nbsp;&nbsp;&nbsp;소</th>
 					<td width="100"><input type="text" size="30" name="address">
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">생&nbsp;&nbsp;&nbsp;일</td>
+					<th width="100" align="center">생&nbsp;&nbsp;&nbsp;일</th>
 					<td width="100"><select name="birthY">
 							<%
 								for (int i = 2016; i >= 1950; i--) {
@@ -165,8 +191,13 @@
 				</tr>
 
 				<tr height="40">
-					<td width="100" align="center">핸드폰번호</td>
-					<td width="100"><input type="text" size="20" name="phone">
+					<th width="100" align="center">핸드폰번호</th>
+					<td width="100"><input type="text" size="20" name="phone">(-를 빼고 입력하시오)
+				</tr>
+				
+				<tr height="40">
+					<th width="100" align="center">사진등록</th>
+					<td width="100"><input type="file" name="filename" onkeydown="event.returnValue=false;"></td>
 				</tr>
 
 				<tr height="40">

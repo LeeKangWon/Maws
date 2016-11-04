@@ -1,4 +1,4 @@
-<%@ include file="index.jsp"%>
+<%@ include file="main.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -135,10 +135,21 @@
 </head>
 <body>
 
-	<div id="cssmenu" style="position:absolute; left:50px; top:300px;">
+	<%
+		if(session.getAttribute("id") == null)
+		{
+			out.print("<script>alert('로그인이 필요한 서비스 입니다.')</script>");
+			out.print("<script>location.href='home.jsp'</script>");
+		}
+	
+		else
+		{
+	%>
+
+	<div id="cssmenu" style="position:absolute; left:100px; top:250px;">
 		<ul>
 			<li class="active"><a href="#">Q&A</a></li>
-			<li><a href="#">홈페이지 제작자</a></li>
+			<li><a href="make_homepage.jsp">홈페이지 제작자</a></li>
 			<li><a href="#">질문게시판</a></li>
 			<li><a href="#">마우스관련</a></li>
 			<li><a href="#">C-edu관련</a></li>
@@ -146,6 +157,10 @@
 			<li class="active"><a href="#">임원게시판</a>
 		</ul>
 	</div>
+	
+	<%
+		}
+	%>
 
 
 </body>

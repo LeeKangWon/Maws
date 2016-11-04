@@ -25,7 +25,7 @@
 		<%		
 		int top = 400;
 		int rowcount = 1;
-			String saveFloder = "resources/image/gallery";
+			String saveFloder = "resources/image/gallery/";
 			ArrayList<GalleryVO> f_list = new ArrayList<GalleryVO>();
 			f_list = dao.getFileNamelist(); //dao로 fileNameList 불러오기
 			//사용할 객체 초기화

@@ -1,4 +1,5 @@
 <%@page import="com.company.maws.MemberVO"%>
+<%@page import="java.net.URLDecoder"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Arrays"%>
 <%@ include file="member_intro.jsp"%>
@@ -9,6 +10,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+table.basic { 
+	width:130%; 
+	line-height:21px; 
+	border-top: 1px solid #cccccc; 
+	border-left: 1px solid #cccccc; 
+	border-collapse: collapse;
+} 
+table.basic th, table.basic td { 
+	color:#678197;
+	text-align:center;
+	border-right: 1px solid #cccccc; 
+	border-bottom: 1px solid #cccccc; 
+	padding: 3px 0; 
+	text-align:center; 
+} 
+table.basic th { 
+	background-color: #eeeeee; 
+}
+</style>
 </head>
 <body>
 
@@ -17,6 +38,7 @@
 
 	<%
 		ArrayList<MemberVO> list = dao.getMemberIntrolist();
+		String saveFloder = "resources/image/member_image/";
 	%>
 
 	<%
@@ -31,6 +53,7 @@
 			String[] schoolNum = new String[1];
 			schoolNum[0] = Arrays.toString(intSchoolNum);
 			System.out.println(schoolNum[0].substring(1, 5));
+			String savePath = saveFloder + vo.getFilename();
 			if(schoolNum[0].substring(1, 5).equals("2013"))
 			{
 				if(rowcount % 2 == 0)
@@ -45,19 +68,19 @@
 	%>
 	
 	<div style="position: absolute; left: <%=left%>px; top: <%=top%>px;">
-		<table border="1">
-			<td rowspan="3"><img src="" width="100" height="150">
+		<table border="1" class="basic">
+			<td rowspan="5"><img src="<%=URLDecoder.decode(savePath, "UTF-8").replaceAll(" ", "")%>" width="100" height="150">
 			<tr>
-				<td><%=vo.getName() %></td>
-				<td><%=vo.getSchoolnum() %></td>
+				<td>이름: <%=vo.getName() %></td>
 			</tr>
 			<tr>
-				<td><%=vo.getBirth() %></td>
-				<td><%=vo.getPhone() %></td>
+				<td>학번: <%=vo.getSchoolnum() %></td>
 			</tr>
 			<tr>
-				<td colspan="3" align="right"><input type="button" value="수정">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-					type="button" value="삭제"></td>
+				<td>생일: <%=Integer.toString(vo.getBirth()).substring(5, 7) + "월 " + Integer.toString(vo.getBirth()).substring(7, 8) + "일" %></td>
+			</tr>
+			<tr>
+				<td>핸드폰: <%=vo.getPhone() %></td>
 			</tr>
 		</table>
 	</div>

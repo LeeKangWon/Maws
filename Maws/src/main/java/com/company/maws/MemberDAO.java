@@ -7,8 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
-import com.company.maws.MemberVO;
+import com.company.maws.MemberVO;;
 
 /*JDBC는 자바 프로그램과 관계형 데이터 원본에 대한 인터페이스이다. 
  * JDBC 라이브러리는 관계형 데이터 베이스에 접근하고, SQL 쿼리문을 실행하는 방법을 제공한다.
@@ -258,7 +257,7 @@ public class MemberDAO {
 
 		try {
 			// 실행
-			String sql = "INSERT INTO member VALUES(?,?,?,?,?,?,?,'0')";
+			String sql = "INSERT INTO member VALUES(?,?,?,?,?,?,?,'0',?)";
 			/*
 			 * INSERT INTO 테이블명 VALUES(컬럼1 넣고자하는 데이터, 컬럼2 넣고자하는 데이터 ...) 컬럼을
 			 * 선택하여 값을 넣을수도 있다. 선택적으로 넣기 위해서는 INSERT 테이블명 VALUES 넣고자하는 데이터
@@ -270,12 +269,14 @@ public class MemberDAO {
 			ps.setString(4, vo.getPassword());
 			ps.setString(5, vo.getAddress());
 			ps.setInt(6, vo.getBirth());
-			ps.setInt(7, vo.getPhone());
+			ps.setString(7, vo.getPhone());
+			ps.setString(8, vo.getFilename());
 
 			result = ps.executeUpdate();
 			// executeUpdate()는 업뎃한 건수를 반환
 
 		} catch (Exception e) {
+			
 
 			System.out.println(e + "=> memberInsert fail");
 
@@ -319,8 +320,9 @@ public class MemberDAO {
 				vo.setPassword(rs.getString(4));
 				vo.setAddress(rs.getString(5));
 				vo.setBirth(rs.getInt(6));
-				vo.setPhone(rs.getInt(7));
+				vo.setPhone(rs.getString(7));
 				vo.setLevel(rs.getInt(8));
+				vo.setFilename(rs.getString(9));
 
 				// vo.set???(rs.???()) : 새로운 객체인 vo 변수들을 설정해준다.
 				// rs.get???(숫자) : 각 타입에 맞도록 rs.getInt(), rs.getString()으로 데이터를
@@ -361,8 +363,9 @@ public class MemberDAO {
 				vo.setPassword(rs.getString("m_password"));
 				vo.setAddress(rs.getString("m_address"));
 				vo.setBirth(rs.getInt("m_birth"));
-				vo.setPhone(rs.getInt("m_phone"));
+				vo.setPhone(rs.getString("m_phone"));
 				vo.setLevel(rs.getInt("m_level"));
+				vo.setFilename(rs.getString("m_filename"));
 
 			}
 			rs.close();
@@ -387,7 +390,7 @@ public class MemberDAO {
 		con = null;
 		ps = null;
 		int result = 0;
-		String sql = "update member set m_name=?, m_school_num=?, m_password=?, m_address=?, m_birth=?, m_phone=?"
+		String sql = "update member set m_name=?, m_school_num=?, m_password=?, m_address=?, m_birth=?, m_phone=?, m_filename=?"
 				+ " where m_id=?";
 		
 
@@ -401,8 +404,9 @@ public class MemberDAO {
 			ps.setString(3, vo.getPassword());
 			ps.setString(4, vo.getAddress());
 			ps.setInt(5, vo.getBirth());
-			ps.setInt(6, vo.getPhone());
+			ps.setString(6, vo.getPhone());
 			ps.setString(7, vo.getId());
+			ps.setString(8, vo.getFilename());
 
 
 			// vo객체의 id ~ License 모두 가져옴.
@@ -496,8 +500,9 @@ public class MemberDAO {
 				vo.setPassword(rs.getString(4));
 				vo.setAddress(rs.getString(5));
 				vo.setBirth(rs.getInt(6));
-				vo.setPhone(rs.getInt(7));
+				vo.setPhone(rs.getString(7));
 				vo.setLevel(rs.getInt(8));
+				vo.setFilename(rs.getString(9));
 
 				// vo.set???(rs.???()) : 새로운 객체인 vo 변수들을 설정해준다.
 				// rs.get???(숫자) : 각 타입에 맞도록 rs.getInt(), rs.getString()으로 데이터를

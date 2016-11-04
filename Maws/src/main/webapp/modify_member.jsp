@@ -1,7 +1,7 @@
 <%@page import="com.company.maws.MemberDAO"%>
 <%@page import="com.company.maws.MemberVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ include file="index.jsp"%>
+<%@ include file="main.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -116,8 +116,11 @@ border-bottom: 2px solid #009999;border-spacing: 0}
 	<%
 		
 		String id = (String)session.getAttribute("id");
+		String saveFloder = "resources/image/member_image/";
 		MemberDAO dao = MemberDAO.getDAO();
 		MemberVO vo = dao.getMember(id);
+		
+		System.out.println(vo.getFilename());
 		
 		try {
 			
@@ -189,7 +192,13 @@ border-bottom: 2px solid #009999;border-spacing: 0}
 					<th width="100" align="center">핸드폰번호</td>
 					<td width="100"><input type="text" size="20" name="phone" value="<%=vo.getPhone()%>">
 				</tr>
-
+				
+				
+				<tr>
+					<th width="100" align="center">사진</td>
+					<td width="100"><input type="file" size="20" name="phone"><img src="<%=saveFloder + vo.getFilename() %>"
+									 width="300" height="500"/>
+				</tr>
 				<tr height="40">
 					<th colspan="2" align="center">
 					<input type="submit" value="저장" name="contract">

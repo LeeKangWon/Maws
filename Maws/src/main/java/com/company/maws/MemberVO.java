@@ -10,14 +10,17 @@ public class MemberVO {
 	private String password;
 	private String address;
 	private int birth;
-	private int phone;
+	private String phone;
 	private int level;
+	private String filename;
+
+
 
 	public MemberVO() {
 	}
 
-	public MemberVO(String name, int schoolnum, String id, String password, String address, int birth, int phone,
-			int level) {
+	public MemberVO(String name, int schoolnum, String id, String password, String address, int birth, String phone,
+			int level, String filename) {
 
 		this.name = name;
 		this.schoolnum = schoolnum;
@@ -27,7 +30,7 @@ public class MemberVO {
 		this.birth = birth;
 		this.phone = phone;
 		this.level = level;
-
+		this.filename = filename;
 	}
 
 	public String getName() {
@@ -78,11 +81,11 @@ public class MemberVO {
 		this.birth = birth;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -92,6 +95,14 @@ public class MemberVO {
 
 	public void setLevel(int level) {
 		this.level = level;
+	}
+	
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 
 }

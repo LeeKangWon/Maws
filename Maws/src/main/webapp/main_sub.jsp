@@ -1,4 +1,4 @@
-<%@ include file="index.jsp"%>
+<%@ include file="main.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -136,7 +136,7 @@
 </head>
 <body>
 
-	<div id="cssmenu" style="position: absolute; left: 50px; top: 300px;">
+	<div id="cssmenu" style="position: absolute; left: 100px; top: 250px;">
 		<ul>
 			<li class="active"><a href="#">동아리 소개</a></li>
 			<li><a href="maws_intro.jsp">마우스란?</a></li>

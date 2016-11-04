@@ -169,7 +169,7 @@ A:hover {
 
 </head>
 <body LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
-<div style="position: absolute; left: 600px; top: 260px;">
+<div style="position: absolute; left: 450px; top: 260px;">
 	<form method="post" name="diaryInput" action="event_write.jsp"
 		onSubmit="return check()">
 
@@ -212,7 +212,7 @@ A:hover {
 									<tr>
 										<td width="5"></td>
 										<td width="195" valign="top" align="left" class="title"><textarea
-												name="contents" cols="30" rows="5" class="title"><%=contents%></textarea></td>
+												name="contents" cols="80" rows="15" class="title"><%=contents%></textarea></td>
 									</tr>
 									<tr>
 										<td colspan="2" width="200"></td>
@@ -231,7 +231,7 @@ A:hover {
 					</table>
 
 
-					<table width="210" height="25" border="0" cellspacing="0"
+					<table width="500" height="25" border="0" cellspacing="0"
 						cellpadding="0" align="center">
 						<tr>
 							<td width="210" height="20" align="center"><input

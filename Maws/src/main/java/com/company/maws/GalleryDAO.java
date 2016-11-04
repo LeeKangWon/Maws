@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.company.maws.GalleryVO;
+import com.oreilly.servlet.MultipartRequest;
 
 /*JDBC는 자바 프로그램과 관계형 데이터 원본에 대한 인터페이스이다. 
  * JDBC 라이브러리는 관계형 데이터 베이스에 접근하고, SQL 쿼리문을 실행하는 방법을 제공한다.

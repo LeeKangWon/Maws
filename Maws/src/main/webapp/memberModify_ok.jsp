@@ -23,7 +23,7 @@
 		vo.setId(id);
 		dao = MemberDAO.getDAO();
 		dao.updateMember(vo);
-		 %>
+	%>
 
 		 <table  style="position: absolute; top: 200px; left: 400px" width="700" cellpadding="5"
 		  align="center">
